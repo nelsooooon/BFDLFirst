@@ -19,18 +19,19 @@ A lightweight, notebook-driven pipeline to scrape Google Play Store reviews for 
 - Visualization (optional): matplotlib, seaborn, wordcloud
 - Notebooks: Jupyter / VS Code Notebook
 
-Key files:
+## Key Files
+
 - Notebooks:
-	- Inference: `Inference_Nelson_Ahli.ipynb`
-	- Scraping: `Scraping_Nelson_Ahli.ipynb`
+  - Inference: `Inference_Nelson_Ahli.ipynb`
+  - Scraping: `Scraping_Nelson_Ahli.ipynb`
 - Models & vectorizer (pretrained):
-	- `TFIDF_model_sentiment.pkl`
-	- `LR_model_sentiment.h5`
-	- `DNN_model_sentiment.h5`
+  - `TFIDF_model_sentiment.pkl`
+  - `LR_model_sentiment.pkl`
+  - `DNN_model_sentiment.h5`
 - Data sample:
-	- `ulasan_classroom.csv`
+  - `ulasan_classroom.csv`
 - Project manifest:
-	- `requirements.txt`
+  - `requirements.txt`
 
 ## Installation
 
@@ -58,7 +59,7 @@ pip install -r requirements.txt
 
 The pinned dependencies include (from `requirements.txt`):
 
-- `google_play_scraper`, `joblib`, `keras`, `matplotlib`, `nltk`, `numpy`, `pandas`, `protobuf`, `Requests`, `scikit_learn`, `seaborn`, `tensorflow`, `wordcloud`
+- `google_play_scraper`, `joblib`, `keras`, `matplotlib`, `nltk`, `numpy`, `pandas`, `protobuf`, `requests`, `scikit_learn`, `seaborn`, `tensorflow`, `wordcloud`
 
 3) Download NLTK resources (first run)
 
@@ -73,7 +74,7 @@ python -c "import nltk; nltk.download('stopwords'); nltk.download('wordnet'); nl
 This repository already includes the pretrained artifacts in the project root:
 
 - `TFIDF_model_sentiment.pkl`
-- `LR_model_sentiment.h5`
+- `LR_model_sentiment.pkl`
 - `DNN_model_sentiment.h5`
 
 If you move them, adjust paths in the inference notebook accordingly.
@@ -84,7 +85,7 @@ Inside `Inference_Nelson_Ahli.ipynb`, the model/vectorizer are loaded from `/con
 
 ```python
 tfidf = joblib.load("TFIDF_model_sentiment.pkl")
-model_lr = joblib.load("LR_model_sentiment.h5")
+model_lr = joblib.load("LR_model_sentiment.pkl")
 model_dnn = tf.keras.models.load_model("DNN_model_sentiment.h5")
 ```
 
