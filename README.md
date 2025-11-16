@@ -91,13 +91,13 @@ model_dnn = tf.keras.models.load_model("DNN_model_sentiment.h5")
 
 ## How to Run
 
-Option A — VS Code Notebook
+Option A - VS Code Notebook
 - Open `Inference_Nelson_Ahli.ipynb` in VS Code.
 - Select the Python interpreter for your virtual environment.
 - Run all cells (or step through them).
 - At the input prompt, type a review (e.g., "this app is amazing") and view predictions from both models.
 
-Option B — Jupyter (CLI)
+Option B - Jupyter (CLI)
 
 ```bash
 python -m jupyter notebook
@@ -107,7 +107,7 @@ python -m jupyter lab
 
 - Open `Inference_Nelson_Ahli.ipynb` and run all cells.
 
-Option C — Scrape dataset
+Option C - Scrape dataset
 - Open and run `Scraping_Nelson_Ahli.ipynb`.
 - It uses `google_play_scraper` to fetch reviews for Google Classroom (`com.google.android.apps.classroom`) and saves to `ulasan_classroom.csv`.
 
@@ -136,4 +136,4 @@ Option C — Scrape dataset
 
 ---
 
-Maintained for the BFDL module — notebooks and models by Nelson Ahli.
+Maintained for the BFDL module - notebooks and models by Nelson Ahli.
